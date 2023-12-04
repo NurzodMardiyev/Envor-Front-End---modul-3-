@@ -1,0 +1,162 @@
+#services {
+  position: relative;
+}
+.services__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 180px;
+}
+.services__head {
+  max-width: 695px;
+  text-align: center;
+  h2 {
+    @include text(#fff, "Graphik", 60px, 700, 70px);
+  }
+}
+.services__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 80px;
+}
+.content__box {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+
+  .icon {
+    width: 69px;
+    height: 69px;
+    background-color: rgba(84, 84, 212, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    gap: 20px;
+
+    img {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+  }
+
+  .carrotColor {
+    background-color: rgba(240, 64, 55, 0.1);
+  }
+  .yellowColor {
+    background-color: rgba(254, 220, 90, 0.1);
+  }
+  h3 {
+    @include text(#fff, "Nunito Sans", 28px, 600, normal);
+  }
+  p {
+    @include text(rgba(255, 255, 255, 0.7), "Nunito Sans", 20px, 400, 28px);
+    letter-spacing: 0px;
+  }
+}
+
+.blueBlur {
+  position: absolute;
+  top: -500px;
+  left: -500px;
+  z-index: -2;
+}
+.linerBlur {
+  position: absolute;
+  top: -400px;
+  opacity: 0.7;
+  // width: 100%;
+  right: 0px;
+  z-index: -2;
+}
+.playVector {
+  position: absolute;
+  left: 120px;
+  top: -30px;
+}
+.plusVectoor {
+  position: absolute;
+  right: 130px;
+  top: 70px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .services__wrapper {
+    margin-top: 100px;
+  }
+  .services__head {
+    max-width: 495px;
+    h2 {
+      @include text(#fff, "Graphik", 42px, 700, 70px);
+    }
+  }
+  .content__box {
+    margin-bottom: 80px;
+  }
+  .blueBlur {
+    display: none;
+  }
+  .linerBlur {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .services__body {
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .services__wrapper {
+    margin-top: 100px;
+  }
+  .services__head {
+    max-width: 100%;
+    text-align: left;
+    h2 {
+      @include text(#fff, "Graphik", 36px, 700, 60px);
+    }
+  }
+  .content__box {
+    margin-bottom: 80px;
+    width: 100%;
+
+    .icon {
+      h3 {
+        @include text(#fff, "Nunito Sans", 24px, 600, normal);
+      }
+      p {
+        @include text(rgba(255, 255, 255, 0.7), "Nunito Sans", 16px, 400, 28px);
+        letter-spacing: 0px;
+      }
+    }
+  }
+  .blueBlur {
+    display: none;
+  }
+  .linerBlur {
+    display: none;
+  }
+
+  .playVector {
+    position: absolute;
+    left: 80px;
+    top: -50px;
+
+    img {
+      width: 50px;
+    }
+  }
+  .plusVectoor {
+    position: absolute;
+    right: 40px;
+    top: 50px;
+  }
+}

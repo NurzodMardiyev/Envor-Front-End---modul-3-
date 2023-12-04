@@ -1,0 +1,99 @@
+.choice__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.choice__info {
+  display: flex;
+  margin-top: 200px;
+  h2 {
+    @include text(#fff, "Graphik", 60px, 700, 70px);
+    max-width: 588px;
+  }
+
+  p {
+    @include text(rgba(255, 255, 255, 0.7), "Nunito Sans", 21px, 400, 39px);
+    letter-spacing: -0.657px;
+    max-width: 588px;
+  }
+}
+.choice__video {
+  width: 100%;
+  min-height: 670px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/videoImg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 50px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .choice__info {
+    margin-top: 100px;
+    h2 {
+      @include text(#fff, "Graphik", 42px, 700, 60px);
+    }
+
+    p {
+      @include text(rgba(255, 255, 255, 0.7), "Nunito Sans", 18px, 400, 30px);
+      letter-spacing: -0.657px;
+      margin-top: 10px;
+    }
+  }
+  .choice__video {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/videoImg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    margin-top: 50px;
+
+    img {
+      width: 124px;
+      height: 124px;
+      object-fit: cover;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .choice__info {
+    flex-direction: column;
+    margin-top: 100px;
+    h2 {
+      @include text(#fff, "Graphik", 36px, 700, 150%);
+      width: 100%;
+    }
+
+    p {
+      @include text(rgba(255, 255, 255, 0.7), "Nunito Sans", 16px, 300, 150%);
+      letter-spacing: 0.5px;
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  }
+  .choice__video {
+    width: 100%;
+    min-height: 184px;
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/videoImg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    img {
+      width: 40px;
+      height: 40px;
+
+      object-fit: cover;
+    }
+  }
+}

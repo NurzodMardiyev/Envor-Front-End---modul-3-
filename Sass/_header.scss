@@ -1,0 +1,144 @@
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px auto;
+}
+.logotip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  p {
+    @include text(#fff, "Montserrat", 28px, 700, 140%);
+  }
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  .menu__list-item {
+    @include text(rgba(255, 255, 255, 0.7), "Nunito Sans", 18px, 400, normal);
+  }
+}
+.menu__active {
+  .menu__list-item {
+    color: #5454d4;
+  }
+}
+.btn__box {
+  .btn {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    // backdrop-filter: blur(1px);
+    background-color: inherit;
+    @include text(#fff, "Nunito Sans", 16px, 400, normal);
+    backdrop-filter: blur(1px);
+    padding: 9px 45px;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #5454d4;
+    border-color: #5454d4;
+  }
+}
+
+.hamburger {
+  display: none; //block
+  width: 31px;
+  height: 31px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  outline: 1px solid red;
+}
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: 6px 0;
+  background-color: #fff;
+  transition: 0.4s;
+}
+.hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.hamburger.is-active .bar {
+  transform: translate(100%);
+  opacity: 0;
+}
+.hamburger.is-active::after {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+.responsive__menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 300px;
+  background-color: rgba(44, 44, 44, 0.7);
+  height: 100vh;
+  padding: 100px 30px;
+  gap: 20px;
+  transition: all 0.4s ease;
+
+  .res__menu {
+    gap: 20px;
+    .menu__list-item {
+      @include text(#fff, "Nunito Sans", 18px, 400, normal);
+    }
+    .active {
+      .menu__list-item {
+        color: #5454d4;
+      }
+    }
+  }
+
+  .res__btn__box {
+    .btn {
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      // backdrop-filter: blur(1px);
+      background-color: inherit;
+      @include text(#fff, "Nunito Sans", 16px, 400, normal);
+      backdrop-filter: blur(1px);
+      padding: 9px 45px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #5454d4;
+      border-color: #5454d4;
+    }
+  }
+}
+.responsive__menu.is-active {
+  left: -100%;
+}
+@media screen and (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .btn__box {
+    display: none;
+  }
+}

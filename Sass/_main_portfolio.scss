@@ -1,0 +1,166 @@
+.portfolio__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.portfolio__head {
+  h2 {
+    @include text(#fff, "Nunito Sans", 60px, 700, normal);
+  }
+}
+.portfolio__body {
+  display: flex;
+  justify-content: space-between;
+  height: 417px;
+  width: 100%;
+
+  .project__box {
+    width: 384px;
+    height: 301px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      height: 301px;
+      width: 384px;
+      border-radius: 14px;
+      background-color: #1e1e20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 336px;
+        height: 253px;
+        object-fit: contain;
+      }
+    }
+  }
+  .project__box:first-child {
+    height: 100%;
+    align-items: flex-start;
+  }
+  .project__box:nth-child(2) {
+    align-items: center;
+    height: 100%;
+  }
+  .project__box:last-child {
+    height: 100%;
+    align-items: flex-end;
+  }
+}
+
+.slider__btn {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+
+  span {
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 40px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .portfolio__head {
+    h2 {
+      @include text(#fff, "Nunito Sans", 42px, 700, normal);
+    }
+  }
+  .portfolio__body {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 417px;
+    width: 100%;
+
+    .project__box {
+      width: 344px;
+      height: 261px;
+
+      div {
+        height: 260px;
+        width: 344px;
+        border-radius: 14px;
+        background-color: #1e1e20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 266px;
+          height: 223px;
+          object-fit: contain;
+        }
+      }
+    }
+    .project__box:last-child {
+      display: none;
+    }
+  }
+
+  .slider__btn {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+
+    span {
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-radius: 40px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio__wrapper {
+    margin-top: 80px;
+  }
+  .portfolio__head {
+    h2 {
+      @include text(#fff, "Nunito Sans", 36px, 700, 150%);
+    }
+  }
+  .portfolio__body {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+
+    .project__box {
+      width: 324px;
+      height: 261px;
+      div {
+        height: 261px;
+        width: 324px;
+        border-radius: 14px;
+        background-color: #1e1e20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 286px;
+          height: 253px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .project__box:first-child {
+      height: 100%;
+      align-items: center;
+    }
+
+    .project__box:nth-child(2) {
+      display: none;
+    }
+    .project__box:last-child {
+      display: none;
+    }
+  }
+}
